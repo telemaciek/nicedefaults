@@ -7,28 +7,28 @@ A collection of handy libraries and some custom HTML & CSS (and perhaps a tiny b
 Contents
 -------------
 
-_reset.css_
+__reset.css__  
 Eric Meyer's Reset v2.0
 http://meyerweb.com/eric/tools/css/reset/
 
-_normalize.css_
+__normalize.css__  
 Nicolas Gallagher's Normalize, v2.1.2
 https://github.com/necolas/normalize.css
 
-_grid.css_
+__grid.css__  
 Customized semi-responsive grid solution, based on Toast
 http://daneden.me/toast/
 
-_type.css_
+__type.css__  
 Typography. Fonts, their sizes, baseline and useful classes
 
-_other.css_
+__other.css__  
 A collection of useful... stuff
 
-_index.html_
+__index.html__  
 Basic template
 
-_grid.html_
+__grid.html__  
 Showing how the grid.css system works (no nesting)
 
 
