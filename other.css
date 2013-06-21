@@ -1,87 +1,15 @@
+/*
+	Clear fix, via http://css-tricks.com/snippets/css/clear-fix/
+	If not supporting IE6/7, delete respective lines
+	To use selectivly (without .clearfix class) see http://nicolasgallagher.com/micro-clearfix-hack/
+*/
 
-
-/*-----------------------------------*\
-	$TYPE
-
-	Works off the assumption of a 1.5
-	line height @ 20px. Again, change
-	as necessary.
-\*-----------------------------------*/
-
-p, .p, ul, ol, hr, table, form, pre,
-h1, .alpha, h2, .beta {
-	margin-bottom: 30px;
-	margin-bottom: 1.5rem;
-}
-
-h1, .alpha {
-	font-size: 60px;
-	font-size: 3rem;
-	font-weight: 700;
-	line-height: 1;
-}
-
-h2, .beta {
-	font-size: 30px;
-	font-size: 1.5rem;
-	font-weight: 400;
-	line-height: 2;
-}
-
-h3, .gamma {
-	font-size: 20px;
-	font-size: 1rem;
-	font-weight: 700;
-}
-
-hr {
-	border: none;
-	border-bottom: 1px solid rgba(0,0,0,.1);
-	margin-top: -1px;
-}
-
-
-
-
-/*-----------------------------------*\
-	$MAIN
-\*-----------------------------------*/
-
-html {
-	font: 125%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif; /* Toast */
-}
-
-
-/* FONT - SNOOK */
-
-html {font-size: 62.5%;} 
-
-body { font-size: 14px; font-size: 1.4rem; } /* =14px */
-h1   { font-size: 24px; font-size: 2.4rem; } /* =24px */
-
-/* We'd like the font to get a bit smaller on smaller screens */
-
-@media screen and (max-width: 650px) {
-	html {
-		font-size: 100%;
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
 	}
-}
-
-
-
-
-
-
-
-
-
-/*Useful classes*/
-
-
-.clear-after { zoom: 1 /*ie6/7*/ }
-.clear-after:after{ content: " "; height: 0; clear: both; display: block; }
-
-
-
-
-
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
