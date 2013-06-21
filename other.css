@@ -21,3 +21,15 @@
   display: table;
   clear: both;
 }
+
+
+/*
+	Truncate text via CSS
+*/
+.truncate {
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
