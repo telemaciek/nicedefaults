@@ -33,11 +33,6 @@
      font-style: italic;
 }
 
-
-
-
-
-
 /* ---------------------- */
 
 /* Hyphenation, http://www.newnet-soft.com/blog/csstypography */ 
@@ -60,9 +55,6 @@
             hyphenate-lines: 3; /* How many lines can be hyphenated in a row */
  }
 
-
-
-
 /* ---------------------- */
 
 /* Ligatures, http://www.newnet-soft.com/blog/csstypography */ 
@@ -78,29 +70,12 @@
 
 /* ---------------------- */
 
-/* Ligatures, http://www.newnet-soft.com/blog/csstypography */ 
-
-/* Fallback fonts may not share the same aspect ratio as the desired font family and will thus appear less readable. The font-size-adjust property is a way to preserve the readability of text when font fallback occurs. It does this by adjusting the font-size so that the x-height is the same regardless of the font used */
+/* Fallback fonts may not share the same aspect ratio as the desired font family and will thus appear less readable. The font-size-adjust property is a way to preserve the readability of text when font fallback occurs. It does this by adjusting the font-size so that the x-height is the same regardless of the font used.
+http://www.newnet-soft.com/blog/csstypography */
 
 .adjust {
     font-size-adjust: auto; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*
