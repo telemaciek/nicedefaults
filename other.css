@@ -1,4 +1,23 @@
 /*
+	Yeah, we need that on everything!
+*/
+* { 
+	/* No explanation needed here, via http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+	
+	/* Because when have you ever used it? */
+	background-repeat: no-repeat; 
+
+	/* Has it ever been... ok perhaps, let's just delete this than. */
+	vertical-align: middle;
+	
+	/* This allows you to move everything with 'left:' and 'right:', but it makes custom fonts flash. Use with caution */
+	position: relative;
+}
+
+/*
 	Clear fix, via http://css-tricks.com/snippets/css/clear-fix/
 	If not supporting IE6/7, delete respective lines
 	To use selectivly (without .clearfix class) see http://nicolasgallagher.com/micro-clearfix-hack/
