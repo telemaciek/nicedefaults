@@ -13,3 +13,11 @@
 	}
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/* Chris Coyier: "I'd say for the most part these days (if you only need IE 8 and up)": */
+
+.clearfixed-element:after {
+  content: "";
+  display: table;
+  clear: both;
+}
