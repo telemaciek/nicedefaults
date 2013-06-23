@@ -22,6 +22,9 @@
 		.red {
 			background: red;
 		}
+		.blue {
+			background: blue;
+		}
 	</style>
 </head>
 <body>
@@ -29,6 +32,9 @@
 <div class="container">
 	<div class="green" style="height:200px; width: 200px;">
 		
+	</div>
+	<div class="blue" style="height:200px; width: 200px;">
+		Swipe this left
 	</div>
 </div>
 
@@ -54,12 +60,19 @@
 		// http://www.awwwards.com/touchswipe-a-jquery-plugin-for-touch-and-gesture-based-interaction.html
 		// http://www.awwwards.com/demo/touchSwipe-gallery-demo.html 
 		$(".green").swipe({
-		  swipe:function(event, right, distance, duration, fingerCount){
-		    console.log('You just swiped right')
-		    $(this).toggleClass('green red');
+		  swipe:function(event, direction, distance, duration, fingerCount){
+		    console.log('You just swiped ' + direction + ' for ' + distance + 'px')
 		  },
 		  threshold:100 
 		  // Default=75px, a swipe counts only after this (it prevents accidental swipes)
+		});
+
+		$(".blue").swipe({
+		  swipeLeft:function(event, direction, distance, duration, fingerCount) {
+		    //This only fires when the user swipes left
+		    console.log('You just swiped left')
+		    $(this).toggleClass('blue red');
+		  }
 		});
 	});
 
