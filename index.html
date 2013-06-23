@@ -31,7 +31,7 @@
 
 <div class="container">
 	<div class="green" style="height:200px; width: 200px;">
-		
+		&nbsp;
 	</div>
 	<div class="blue" style="height:200px; width: 200px;">
 		Swipe this left
@@ -61,7 +61,7 @@
 		// http://www.awwwards.com/demo/touchSwipe-gallery-demo.html 
 		$(".green").swipe({
 		  swipe:function(event, direction, distance, duration, fingerCount){
-		    console.log('You just swiped ' + direction + ' for ' + distance + 'px')
+		    $(this).text('You just swiped ' + direction + ' for ' + distance + 'px')
 		  },
 		  threshold:100 
 		  // Default=75px, a swipe counts only after this (it prevents accidental swipes)
