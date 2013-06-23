@@ -35,9 +35,10 @@
 <script>
 	$(function() {
 		 // This works because it's on the bottom of the page, so the DOM is ready anyway
-		$('').on('click', function(e){
+		$('body').on('click', function(e){
 			// That's the most common thing I use, anyway
 			e.preventDefault(); 
+			console.log('You just clicked the body')
 		});
 	});
 
