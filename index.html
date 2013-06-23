@@ -3,13 +3,17 @@
 <head>
 	<meta charset="utf-8">
 	<title>
-		Blank
+		
 	</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<link rel="stylesheet" href="reset.css" type="text/css">
 	<link rel="stylesheet" href="normalize.css" type="text/css">
-	<link rel="stylesheet" href="grid.css" type="text/css">
+	<link rel="stylesheet" href="type.css" type="text/css">
+	<link rel="stylesheet" href="other.css" type="text/css">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	
 	<style>
 
 	</style>
@@ -30,18 +34,19 @@
 
 <script>
 	$(function() {
-		$('.class_name').on('click', function(e){
+		 // This works because it's on the bottom of the page, so the DOM is ready anyway
+		$('').on('click', function(e){
+			// That's the most common thing I use, anyway
 			e.preventDefault(); 
-
 		});
 	});
-	
+
 	$(document).ready(function(){  
-	  // initialise when document is ready (excluding images)  
+	  // Initialise when document is ready (excluding images)  
 	});  
 	 
 	$(window).load(function(){  
-	  // initialise when document is ready (including images) 
+	  // Initialise when document is ready (including images) 
 	});  
 </script>
 </body>
