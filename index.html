@@ -16,37 +16,57 @@
 	<!-- See http://purecss.io/ for more useful CSS -->
 	<!-- http://blog.teamtreehouse.com/a-look-at-responsive-css-frameworks -->
 	<style>
-
+		.green {
+			background: green;
+		}
+		.red {
+			background: red;
+		}
 	</style>
 </head>
 <body>
 
 <div class="container">
-	
+	<div class="green" style="height:200px; width: 200px;">
+		
+	</div>
 </div>
 
 <!-- jQuery 1.10.1 -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> 
-<script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
+<script src="js/jquery-1.10.1.min.js"></script>
 
 <!-- jQuery 2.0.2 (no support for IE 6, 7 & 8) -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> 
-<script>window.jQuery || document.write('<script src="js/jquery-2.0.2.min.js"><\/script>')</script>
+<script src="js/jquery-2.0.2.min.js"></script>
+
+<!-- Touch Swipe, https://github.com/mattbryson/TouchSwipe-Jquery-Plugin -->
+<script src="js/jquery.touchSwipe.js"></script> 
 
 <script>
 	$(function() {
 		 // This works because it's on the bottom of the page, so the DOM is ready anyway
 		$('body').on('click', function(e){
 			// That's the most common thing I use, anyway
-			e.preventDefault(); 
+			// e.preventDefault(); 
 			console.log('You just clicked the body')
+		});
+
+		// More easy examples here:
+		// http://www.awwwards.com/touchswipe-a-jquery-plugin-for-touch-and-gesture-based-interaction.html
+		// http://www.awwwards.com/demo/touchSwipe-gallery-demo.html 
+		$(".green").swipe({
+		  swipe:function(event, right, distance, duration, fingerCount){
+		    console.log('You just swiped right')
+		    $(this).toggleClass('green red');
+		  },
+		  threshold:100 
+		  // Default=75px, a swipe counts only after this (it prevents accidental swipes)
 		});
 	});
 
 	$(document).ready(function(){  
 	  // Initialise when document is ready (excluding images)  
 	});  
-	 
+	
 	$(window).load(function(){  
 	  // Initialise when document is ready (including images) 
 	});  
